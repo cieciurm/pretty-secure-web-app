@@ -21,7 +21,8 @@
 				<h1>Rejestracja</h1>
 				<form>
 					<p>login:<input type="text"></p>
-					<p>hasło: <input type="password"></p>
+					<p>hasło: <input id="new_password" onkeyup="check_password()" type="password"></p>
+					<div id="password_strength">Siła hasła</div>
 					<p><input type="submit"></p>
 				</form>
 			</div>
