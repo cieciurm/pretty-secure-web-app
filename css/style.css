@@ -1,0 +1,31 @@
+body {
+	background: #e7eef2;
+	font-family: Tahoma;
+}
+
+h1 {
+	text-align: center;
+}
+
+#wrapper {
+	background: #ffffff;
+	width: 60%;
+	margin: 5em auto;
+	padding: 2em;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 100px rgba(0, 0, 0, 0.1);
+	border-radius: 1.5em;
+}
+
+#register {
+  display: none;  
+}
+
+#register_link {
+  color: blue;
+  text-decoration: underline;
+}
+
+#register_link:hover {
+  color: red;
+  text-decoration: underline;
+}
