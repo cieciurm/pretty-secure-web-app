@@ -10,10 +10,10 @@ function show_register() {
 function check_password() {
 	var password = document.getElementById("new_password").value;
 
-  var lower = false;
-  var upper = false;
-  var digits = false;
-  var punct = false;
+	var lower = false;
+	var upper = false;
+	var digits = false;
+	var punct = false;
 
 	var ASCII_LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
 	var ASCII_UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -24,37 +24,37 @@ function check_password() {
 	var ASCII_UPPERCASE_LEN = ASCII_UPPERCASE.length;
 	var DIGITS_LEN = DIGITS.length;
 	var PUNCTUATION_LEN = PUNCTUATION.length;
-  var len = password.length;
+	var len = password.length;
 
-  for (var i = 0; i < len; i++)
+	for (var i = 0; i < len; i++)
 		for (var j = 0; j < ASCII_LOWERCASE_LEN; j++)
     	if (password[i] == ASCII_LOWERCASE[j]) {
-	      lower = true;
+				lower = true;
 				break;
 			}
 
-  for (var i = 0; i < len; i++)
+	for (var i = 0; i < len; i++)
 		for (var j = 0; j < ASCII_UPPERCASE_LEN; j++)
     	if (password[i] == ASCII_UPPERCASE[j]) {
-	      upper = true;
+				upper = true;
 				break;
 			}
 
-  for (var i = 0; i < len; i++)
+	for (var i = 0; i < len; i++)
 		for (var j = 0; j < DIGITS_LEN; j++)
     	if (password[i] == DIGITS[j]) {
-	      digits = true;
+				digits = true;
 				break;
 			}
 
-  for (var i = 0; i < len; i++)
+	for (var i = 0; i < len; i++)
 		for (var j = 0; j < PUNCTUATION_LEN; j++)
-    	if (password[i] == PUNCTUATION[j]) {
-	      punctuation = true;
+			if (password[i] == PUNCTUATION[j]) {
+				punctuation = true;
 				break;
 			}
 
-  var alphabet_length = lower * ASCII_LOWERCASE_LEN;
+	var alphabet_length = lower * ASCII_LOWERCASE_LEN;
 	alphabet_length = alphabet_length + upper * ASCII_UPPERCASE_LEN;
 	alphabet_length = alphabet_length + digits * DIGITS_LEN;
 	alphabet_length = alphabet_length + punct * PUNCTUATION_LEN;
@@ -62,7 +62,7 @@ function check_password() {
 	/*console.log("Dlugosc alfabetu: " + alphabet_length);*/
 	/*console.log("Dlugosc hasla: " + len);*/
 	var ent_pass = len * Math.log(alphabet_length, 2);
-  var ent_char = Math.log(alphabet_length, 2)
+	var ent_char = Math.log(alphabet_length, 2)
 		/*console.log(ent_pass);*/
 		/*console.log(ent_char);*/
 
