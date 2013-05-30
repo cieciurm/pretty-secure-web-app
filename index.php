@@ -12,15 +12,15 @@
 
 <div id="register">
 	<h1>Rejestracja</h1>
-	<form onsubmit="validate_form();">
+	<form action="register.php" method="post" onsubmit="return validate_form();">
 		<table id="register_table">
 			<tr>
 				<td class="header">login:</td>
-				<td><input type="text"></td>
+				<td><input name="new_login" type="text"></td>
 			</tr>
 			<tr>
 				<td class="header">hasło:</td>
-				<td><input id="new_password" onkeyup="check_password()" type="password"></td>
+				<td><input name="new_password" id="new_password" onkeyup="check_password()" type="password"></td>
 			</tr>
 			<tr>
 				<td colspan="2" id="password_strength">Siła hasła</td>

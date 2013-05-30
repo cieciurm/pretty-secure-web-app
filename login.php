@@ -24,8 +24,8 @@ $result = $statement->fetchAll();
 $salt = substr($result[0]['password'], 0, 3);
 $original_hash = substr($result[0]['password'], 3);
 
-echo "Podany login: $entered_login<br>";
-echo "Podane haslo: $entered_password<br>";
+//echo "Podany login: $entered_login<br>";
+//echo "Podane haslo: $entered_password<br>";
 
 if (hash("sha256", $salt . $entered_password) === $original_hash) {
 	include("newsfeed.php");

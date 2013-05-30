@@ -1,7 +1,9 @@
-<img src="img/happy.jpg" alt="Newsfeed">
+<img src="img/happy.jpg" alt="Aktualności">
+
+<h1>Aktualności</h1>
 
 <p>Witaj, hehe</p>
-<p><a href="">Dodaj nowy post</a></p>
+<p><a href="add.php">Dodaj nowy post</a></p>
 
 <?php
 
@@ -18,15 +20,12 @@ foreach ($results as $post) {
 	$author_query->execute(array($post['user_id']));
 	$author = $author_query->fetchAll();
 
+	echo "<div class=\"post\">\n";
 	echo "<b>Autor:</b> " . $author[0]['login'] . "<br>";
-	echo "<b>Treść:</b> " . $post['post'] . "<br>";
-
-	echo "<hr>";
+	echo "<b>Tytuł:</b> " . $post['title'] . "<br>";
+	echo "<p class=\"post-body\">" . $post['post'] . "</p>";
+	echo "</div>\n";
+	echo "<hr>\n";
 }
-
-//$statement = $db->queryprepare('SELECT * FROM posts WHERE login=?');
-//$statement->execute(array($entered_login));
-
-//$result = $statement->fetchAll();
 
 ?>

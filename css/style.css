@@ -13,8 +13,12 @@ h1.error {
 	color: red;
 }
 
+h1.success {
+	color: green;
+}
+
 #wrapper {
-	width: 600px;
+	width: 500px;
 	background: #ffffff;
 	margin: 1em auto;
 	padding: 4em;
@@ -48,7 +52,7 @@ h1.error {
 }
 
 hr {
-	width: 50%;
+	width: 80%;
 }
 
 input {
@@ -74,4 +78,23 @@ input.send {
 
 #register_table td.header {
 	font-weight: bold;
+}
+
+textarea {
+	border: 1px solid #e7eef2; 
+	margin: 2px;
+	box-shadow: 2px 2px 20px #888888; 
+	padding: 5px;
+	background: rgba(255,255,255,0.5);
+}
+
+.post {
+	margin: auto;
+	width: 80%;
+	text-align: left;
+}
+
+.post-body {
+	text-align: center;
+	font-style: italic;
 }
