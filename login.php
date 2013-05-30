@@ -9,7 +9,7 @@ $entered_password = $_POST['password'];
 //$hash = hash("sha256", $salt . $text);
 //$to_store = $salt . $hash;
 
-$db = new PDO('sqlite:users.db');
+$db = new PDO('sqlite:data.db');
 $statement = $db->prepare('SELECT password FROM users WHERE login=?');
 $statement->execute(array($entered_login));
 
