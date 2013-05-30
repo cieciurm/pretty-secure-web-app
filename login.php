@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/index.js"></script>
-		<title>JS Bin</title>
-	</head>
-	<body>
-		<div id="wrapper">
+<?php include("templates/header"); ?>
+
 <?php
 
 include("config.php");
@@ -46,6 +38,5 @@ if (hash("sha256", $salt . $entered_password) === $original_hash) {
 
 
 ?>
-		</div>
-	</body>
-</html>
+
+<?php include("templates/footer"); ?>
