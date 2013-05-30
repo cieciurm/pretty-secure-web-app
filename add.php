@@ -22,4 +22,6 @@
 	</table>
 </form>
 
+<p><a href="newsfeed.php" title="Powrót">Powrót</a></p>
+
 <?php include("templates/footer"); ?>

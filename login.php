@@ -28,7 +28,7 @@ $original_hash = substr($result[0]['password'], 3);
 //echo "Podane haslo: $entered_password<br>";
 
 if (hash("sha256", $salt . $entered_password) === $original_hash) {
-	include("newsfeed.php");
+	header("Location: newsfeed.php");
 	//echo "Dobre haslo";
 } else {
 	echo "<img src=\"img/sad.jpg\" alt=\"Sad cat\">";

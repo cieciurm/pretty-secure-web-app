@@ -1,3 +1,5 @@
+<?php include("templates/header"); ?>
+
 <img src="img/happy.jpg" alt="Aktualności">
 
 <h1>Aktualności</h1>
@@ -29,3 +31,5 @@ foreach ($results as $post) {
 }
 
 ?>
+
+<?php include("templates/footer"); ?>
