@@ -1,4 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/index.js"></script>
+		<title>JS Bin</title>
+	</head>
+	<body>
+		<div id="wrapper">
 <?php
+
+include("config.php");
 
 $entered_login = $_POST['login'];
 $entered_password = $_POST['password'];
@@ -9,7 +21,9 @@ $entered_password = $_POST['password'];
 //$hash = hash("sha256", $salt . $text);
 //$to_store = $salt . $hash;
 
-$db = new PDO('sqlite:data.db');
+//$DB_FILE = "data.db";
+
+$db = new PDO("sqlite:".DB_FILE);
 $statement = $db->prepare('SELECT password FROM users WHERE login=?');
 $statement->execute(array($entered_login));
 
@@ -18,10 +32,20 @@ $result = $statement->fetchAll();
 $salt = substr($result[0]['password'], 0, 3);
 $original_hash = substr($result[0]['password'], 3);
 
-if (hash("sha256", $salt . $entered_password) === $original_hash) 
-	echo "Dobre haslo";
-else
-	echo "Zle haslo";
+echo "Podany login: $entered_login<br>";
+echo "Podane haslo: $entered_password<br>";
+
+if (hash("sha256", $salt . $entered_password) === $original_hash) {
+	include("newsfeed.php");
+	//echo "Dobre haslo";
+} else {
+	echo "<img src=\"img/sad.jpg\" alt=\"Sad cat\">";
+	echo "<h1 class=\"error\">Podano błędne dane logowania!</h1>";
+	echo "<a href=\"./index.html\" title=\"Zaloguj się\">Spróbuj ponownie</a>";
+}
 
 
 ?>
+		</div>
+	</body>
+</html>
