@@ -28,21 +28,21 @@ function check_password() {
 
 	for (var i = 0; i < len; i++)
 		for (var j = 0; j < ASCII_LOWERCASE_LEN; j++)
-    	if (password[i] == ASCII_LOWERCASE[j]) {
+    			if (password[i] == ASCII_LOWERCASE[j]) {
 				lower = true;
 				break;
 			}
 
 	for (var i = 0; i < len; i++)
 		for (var j = 0; j < ASCII_UPPERCASE_LEN; j++)
-    	if (password[i] == ASCII_UPPERCASE[j]) {
+		    	if (password[i] == ASCII_UPPERCASE[j]) {
 				upper = true;
 				break;
 			}
 
 	for (var i = 0; i < len; i++)
 		for (var j = 0; j < DIGITS_LEN; j++)
-    	if (password[i] == DIGITS[j]) {
+		    	if (password[i] == DIGITS[j]) {
 				digits = true;
 				break;
 			}

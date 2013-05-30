@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<script src="js/index.js"></script>
-		<title>Pretty safe web app - Mateusz Cieciura</title>
+		<script src="js/scripts.js"></script>
+		<title>pretty safe web app</title>
 	</head>
 	<body>
 		<div id="wrapper">
