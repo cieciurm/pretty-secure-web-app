@@ -99,3 +99,20 @@ function validate_form() {
 		return false;
 	}
 }
+
+window.onload = function() {
+	var button = document.getElementById("new_password");
+	button.onkeyup = function() {
+		check_password();
+	}
+
+	var link = document.getElementById("register_link");
+	link.onclick = function() {
+		show_register();
+	}
+
+	var registration_form = document.getElementById("registration_form");
+	registration_form.onsubmit = function() {
+		return validate_form();
+	}
+}

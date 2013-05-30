@@ -8,11 +8,11 @@
 	<input class="send" type="submit" value="OK">
 </form>
 
-<p id="register_link" onclick="show_register();">Nie masz jeszcze konta? Zarejestruj się!</p>
+<p id="register_link">Nie masz jeszcze konta? Zarejestruj się!</p>
 
 <div id="register">
 	<h1>Rejestracja</h1>
-	<form action="register.php" method="post" onsubmit="return validate_form();">
+	<form id="registration_form" action="register.php" method="post">
 		<table id="register_table">
 			<tr>
 				<td class="header">login:</td>
@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<td class="header">hasło:</td>
-				<td><input name="new_password" id="new_password" onkeyup="check_password()" type="password"></td>
+				<td><input name="new_password" id="new_password" type="password"></td>
 			</tr>
 			<tr>
 				<td colspan="2" id="password_strength">Siła hasła</td>
