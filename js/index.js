@@ -63,8 +63,8 @@ function check_password() {
 	/*console.log("Dlugosc hasla: " + len);*/
 	var ent_pass = len * Math.log(alphabet_length, 2);
 	var ent_char = Math.log(alphabet_length, 2)
-		/*console.log(ent_pass);*/
-		/*console.log(ent_char);*/
+	/*console.log(ent_pass);*/
+	/*console.log(ent_char);*/
 
 	var color_bar = document.getElementById("password_strength");
 
