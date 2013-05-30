@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<script src="js/index.js"></script>
 		<title>JS Bin</title>
 	</head>
 	<body>
 		<div id="wrapper">
+			<img src="img/curious.jpg" alt="Login">
 			<h1>Logowanie</h1>
 			<form action="login.php" method="post">
 				<input name="login" type="text">
@@ -19,7 +21,7 @@
 			
 			<div id="register">
 				<h1>Rejestracja</h1>
-				<form>
+				<form onsubmit="validate_form();">
 					<p>login:<input type="text"></p>
 					<p>hasło: <input id="new_password" onkeyup="check_password()" type="password"></p>
 					<div id="password_strength">Siła hasła</div>

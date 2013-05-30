@@ -1,19 +1,28 @@
 body {
 	background: #e7eef2;
-	font-family: Tahoma;
+	font-family: 'Lato', sans-serif;
+	padding: 0;
+	margin: 0;
 }
 
 h1 {
 	text-align: center;
 }
 
+h1.error {
+	color: red;
+}
+
 #wrapper {
+	width: 600px;
 	background: #ffffff;
-	width: 60%;
-	margin: 5em auto;
-	padding: 2em;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 100px rgba(0, 0, 0, 0.1);
-	border-radius: 1.5em;
+	margin: 1em auto;
+	padding: 4em;
+	/*box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 100px rgba(0, 0, 0, 0.1); */
+	box-shadow: 2px 2px 20px #888888;
+	/* border-radius: 1.5em; */
+
+	text-align: center;
 }
 
 #register {
@@ -31,8 +40,21 @@ h1 {
 }
 
 #password_strength {
+	margin: auto;
 	width: 200px;
 	height: 20px;
 	text-align: center;
 	border: 1px solid #000000;
+}
+
+hr {
+	width: 50%;
+}
+
+input {
+	border: 1px solid #e7eef2; 
+	margin: 2px;
+	box-shadow: 2px 2px 20px #888888; 
+	padding: 5px;
+	background: rgba(255,255,255,0.5);
 }
