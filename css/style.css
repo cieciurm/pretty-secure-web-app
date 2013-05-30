@@ -98,3 +98,14 @@ textarea {
 	text-align: center;
 	font-style: italic;
 }
+
+#footer {
+	width: 30%;
+	margin: auto;
+	text-align: center;
+}
+
+#footer .name {
+	font-weight: bold;
+	color: #544363;
+}
