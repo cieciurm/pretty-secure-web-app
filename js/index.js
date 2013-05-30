@@ -89,3 +89,13 @@ function check_password() {
 		color_bar.innerHTML = "Mocne";
 	}
 }
+
+function validate_form() {
+	var new_password = document.getElementById("new_password").value;
+
+	if (new_password.length < 8) {
+		var error_msg = "Twoje hasło musi mieć przynajmniej 8 znaków!";
+		alert(error_msg);
+		return false;
+	}
+}
