@@ -1,8 +1,7 @@
 <?php
-include("../config.php");
 include("../models/user.php");
 
-include("../templates/header"); 
+include("../templates/header_controller"); 
 
 $entered_login = $_POST['login'];
 $entered_password = $_POST['password'];

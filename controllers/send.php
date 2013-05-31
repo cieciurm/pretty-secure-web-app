@@ -1,17 +1,17 @@
 <?php
-include("../config.php");
 include("../models/post.php");
 
+include("../templates/header_controller"); 
+
 $user_id = 2;
-$post_title = $_POST['title'];
-$post_content = $_POST['content'];
+$post_title = htmlentities($_POST['title']);
+$post_content = htmlentities($_POST['content']);
 
 $post = new Post($post_title, $post_content, $user_id);
 
 $post->addPost();
 
-header("refresh: 2;url=../newsfeed.php");
-include("../templates/header"); 
+header("refresh: 2; url=../newsfeed.php");
 ?>
 
 <img src="../img/thumb-up.jpg" alt="Udało się">

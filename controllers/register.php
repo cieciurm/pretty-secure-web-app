@@ -1,9 +1,10 @@
 <?php
-include("../templates/header");
 include("../models/user.php");
 
-$entered_login = $_POST['new_login'];
-$entered_password = $_POST['new_password'];
+include("../templates/header");
+
+$entered_login = htmlentities($_POST['new_login']);
+$entered_password = htmlentities($_POST['new_password']);
 
 //echo "Podany login $entered_login";
 //echo "Podane haslo $entered_password";
