@@ -1,41 +1,21 @@
-<?php include("templates/header"); ?>
-
 <?php
-
 include("config.php");
+include("models/user.php");
+
+include("templates/header"); 
 
 $entered_login = $_POST['login'];
 $entered_password = $_POST['password'];
 
-//for ($i = 0; $i < 3; $i++) 
-//$salt = $salt . chr(rand(97, 122));
+$user = new User($entered_login, $entered_password);
 
-//$hash = hash("sha256", $salt . $text);
-//$to_store = $salt . $hash;
-
-//$DB_FILE = "data.db";
-
-$db = new PDO("sqlite:".DB_FILE);
-$statement = $db->prepare('SELECT password FROM users WHERE login=?');
-$statement->execute(array($entered_login));
-
-$result = $statement->fetchAll();
-
-$salt = substr($result[0]['password'], 0, 3);
-$original_hash = substr($result[0]['password'], 3);
-
-//echo "Podany login: $entered_login<br>";
-//echo "Podane haslo: $entered_password<br>";
-
-if (hash("sha256", $salt . $entered_password) === $original_hash) {
+if ($user->checkIfPasswordCorrect() == true) {
 	header("Location: newsfeed.php");
-	//echo "Dobre haslo";
 } else {
 	echo "\t\t<img src=\"img/sad.jpg\" alt=\"Sad cat\">\n";
 	echo "\t\t<h1 class=\"error\">Podano błędne dane logowania!</h1>\n";
 	echo "\t\t<a href=\"./index.php\" title=\"Zaloguj się\">Spróbuj ponownie</a>\n";
 }
 
+include("templates/footer");
 ?>
-
-<?php include("templates/footer"); ?>
