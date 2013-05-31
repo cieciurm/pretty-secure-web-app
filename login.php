@@ -31,11 +31,10 @@ if (hash("sha256", $salt . $entered_password) === $original_hash) {
 	header("Location: newsfeed.php");
 	//echo "Dobre haslo";
 } else {
-	echo "<img src=\"img/sad.jpg\" alt=\"Sad cat\">";
-	echo "<h1 class=\"error\">Podano błędne dane logowania!</h1>";
-	echo "<a href=\"./index.php\" title=\"Zaloguj się\">Spróbuj ponownie</a>";
+	echo "\t\t<img src=\"img/sad.jpg\" alt=\"Sad cat\">\n";
+	echo "\t\t<h1 class=\"error\">Podano błędne dane logowania!</h1>\n";
+	echo "\t\t<a href=\"./index.php\" title=\"Zaloguj się\">Spróbuj ponownie</a>\n";
 }
-
 
 ?>
 
