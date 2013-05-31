@@ -4,7 +4,7 @@
 
 <h1>Napisz wiadomość</h1>
 
-<form id="send_post" action="send.php" method="post">
+<form id="send_post" action="controllers/send.php" method="post">
 	<table id="register_table">
 		<tr>
 			<td class="header">Tytuł:</td>

@@ -1,7 +1,7 @@
 <?php include("templates/header"); ?>			
 		<img src="img/curious.jpg" alt="Login">
 		<h1>Logowanie</h1>
-		<form action="login.php" method="post">
+		<form action="controllers/login.php" method="post">
 			<input name="login" type="text">
 			<input name="password" type="password">
 			<input class="send" type="submit" value="OK">
@@ -11,7 +11,7 @@
 
 		<div id="register">
 			<h1>Rejestracja</h1>
-			<form id="registration_form" action="register.php" method="post">
+			<form id="registration_form" action="controllers/register.php" method="post">
 				<table id="register_table">
 					<tr>
 						<td class="header">login:</td>
