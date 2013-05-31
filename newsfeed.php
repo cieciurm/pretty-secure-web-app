@@ -15,7 +15,7 @@ $db = new PDO("sqlite:".DB_FILE);
 
 echo "<hr>";
 
-$results = $db->query('SELECT * FROM posts');
+$results = $db->query('SELECT * FROM posts ORDER BY id DESC');
 
 foreach ($results as $post) {
 	$author_query = $db->prepare('SELECT login FROM users WHERE id=?');
