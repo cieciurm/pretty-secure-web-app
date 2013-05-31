@@ -90,7 +90,7 @@ function check_password() {
 	}
 }
 
-function validate_form() {
+function validate_registration_form() {
 	var new_password = document.getElementById("new_password").value;
 
 	if (new_password.length < 8) {
@@ -113,6 +113,7 @@ window.onload = function() {
 
 	var registration_form = document.getElementById("registration_form");
 	registration_form.onsubmit = function() {
-		return validate_form();
+		return validate_registration_form();
 	}
+
 }
