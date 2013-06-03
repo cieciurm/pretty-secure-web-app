@@ -1,10 +1,16 @@
-<?php include("templates/header"); ?>
+<?php 
+
+if (isset($_COOKIE["user"]) == false) 
+	header("Location: index.php");
+
+include("templates/header"); 
+?>
 
 <img src="img/happy.jpg" alt="Aktualności">
 
 <h1>Aktualności</h1>
 
-<p>Witaj, hehe</p>
+<p>Witaj, <?php echo $_COOKIE["user"]; ?></p>
 <p><a href="add.php">Dodaj nowy post</a></p>
 
 <?php

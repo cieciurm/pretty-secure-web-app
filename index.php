@@ -1,4 +1,9 @@
-<?php include("templates/header"); ?>			
+<?php 
+
+if (isset($_COOKIE["user"]))
+	header("Location: newsfeed.php");
+	
+include("templates/header"); ?>			
 		<img src="img/curious.jpg" alt="Login">
 		<h1>Logowanie</h1>
 		<form action="controllers/login.php" method="post">

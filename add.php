@@ -1,4 +1,10 @@
-<?php include("templates/header"); ?>
+<?php 
+
+if (isset($_COOKIE["user"]) == false)
+	header("Location: index.php");
+
+include("templates/header");
+?>
 
 <img src="img/writing.jpg" alt="Napisz wiadomość">
 
