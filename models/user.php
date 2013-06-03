@@ -51,5 +51,21 @@ class User {
 		else
 			return false;
 	}
+
+	function getLogin() {
+		return $this->login;
+	}
+
+	function getUserId() {
+		if ($this->checkIfExists() == false)
+			return -1;
+
+		$db = new PDO("sqlite:".DB_FILE);
+		$statement = $db->prepare('SELECT id FROM users WHERE login=?');
+		$statement->execute(array($this->login));
+		$result = $statement->fetchAll();
+
+		return $result[0]["id"];
+	}
 }
 ?>
