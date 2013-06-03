@@ -1,6 +1,7 @@
 <?php 
+session_start();
 
-if (isset($_COOKIE["user"]) == false) 
+if (isset($_SESSION["id"]) == false) 
 	header("Location: index.php");
 
 include("templates/header"); 
@@ -10,8 +11,12 @@ include("templates/header");
 
 <h1>Aktualności</h1>
 
-<p>Witaj, <?php echo $_COOKIE["user"]; ?></p>
-<p><a href="add.php">Dodaj nowy post</a></p>
+<p>Cześć, <?php echo $_SESSION["login"]; ?>!</p>
+<ul id="menu">
+	<li> <a href="add.php">Dodaj post</a>
+	<li> <a href="">Edytuj profil</a>
+	<li> <a href="controllers/logout.php">Wyloguj się</a>
+</ul>
 
 <?php
 

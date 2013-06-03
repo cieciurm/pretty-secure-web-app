@@ -1,6 +1,6 @@
 <?php 
-
-if (isset($_COOKIE["user"]))
+session_start();
+if (isset($_SESSION["id"]) == true)
 	header("Location: newsfeed.php");
 	
 include("templates/header"); ?>			

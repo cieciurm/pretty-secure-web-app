@@ -1,6 +1,6 @@
 <?php 
-
-if (isset($_COOKIE["user"]) == false)
+session_start();
+if (isset($_SESSION["id"]) == false)
 	header("Location: index.php");
 
 include("templates/header");
