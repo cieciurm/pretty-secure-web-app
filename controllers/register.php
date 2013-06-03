@@ -1,10 +1,14 @@
 <?php
+
+if (isset($_POST["new_login"]) == false || isset($_POST["new_password"]) == false)
+	header("Location: ../index.php");
+
 include("../models/user.php");
 
-include("../templates/header");
+include("../templates/header_controller");
 
-$entered_login = htmlentities($_POST['new_login']);
-$entered_password = htmlentities($_POST['new_password']);
+$entered_login = htmlentities($_POST["new_login"]);
+$entered_password = htmlentities($_POST["new_password"]);
 
 //echo "Podany login $entered_login";
 //echo "Podane haslo $entered_password";
@@ -12,7 +16,7 @@ $entered_password = htmlentities($_POST['new_password']);
 $user = new User($entered_login, $entered_password);
 
 // Sprawdzamy czy istnieje juz taki uzytkownik
-if ($user->checkIfExists() == true)
+if ($user->checkIfExists() == true) {
 	echo "<img src=\"../img/sad.jpg\" alt=\"Sad cat\">";
 	echo "<h1 class=\"error\">Użytkownik o podanej nazwie już istnieje!</h1>";
 	echo "<p><a href=\"../index.php\">Spróbuj ponownie</a></p>";
