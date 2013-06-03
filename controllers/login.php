@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../models/user.php");
 
 $entered_login = htmlentities($_POST["login"]);
@@ -7,10 +8,10 @@ $entered_password = htmlentities($_POST["password"]);
 $user = new User($entered_login, $entered_password);
 
 if ($user->checkIfPasswordCorrect() == true) {
+	$_SESSION["id"] = $user->getUserId();
+	$_SESSION["login"] = $user->getLogin();
 	//echo $user->getLogin();
 	//echo $user->getUserId();
-	setcookie("user", $user->getLogin(), time() + 120, "/");
-	setcookie("user_id", $user->getUserId(), time() + 120, "/");
 	header("Location: ../newsfeed.php");
 } else {
 	include("../templates/header_controller"); 

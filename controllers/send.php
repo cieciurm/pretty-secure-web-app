@@ -1,20 +1,21 @@
 <?php
+session_start();
 
-if (isset($_POST["new_login"]) == false || isset($_POST["new_password"]) == false)
+if (isset($_SESSION["id"]) == false )
 	header("Location: ../index.php");
 
 include("../models/post.php");
 
 include("../templates/header_controller");
 
-$user_id = $_COOKIE["user_id"];
+$user_id = $_SESSION["id"];
 $post_title = htmlentities($_POST["title"]);
 $post_content = htmlentities($_POST["content"]);
 
 $post = new Post($post_title, $post_content, $user_id);
 $post->addPost();
 
-header("refresh: 2; url=../newsfeed.php");
+header("refresh: 1; url=../newsfeed.php");
 ?>
 
 <img src="../img/thumb-up.jpg" alt="Udało się">
