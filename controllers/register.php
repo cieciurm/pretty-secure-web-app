@@ -1,7 +1,9 @@
 <?php
-
-if (isset($_POST["new_login"]) == false || isset($_POST["new_password"]) == false)
+session_start();
+if (isset($_SESSION["id"]) == false) {
 	header("Location: ../index.php");
+	exit;
+}
 
 include("../models/user.php");
 

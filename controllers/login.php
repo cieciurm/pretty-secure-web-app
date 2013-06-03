@@ -13,6 +13,7 @@ if ($user->checkIfPasswordCorrect() == true) {
 	//echo $user->getLogin();
 	//echo $user->getUserId();
 	header("Location: ../newsfeed.php");
+	exit;
 } else {
 	include("../templates/header_controller"); 
 	echo "\t\t<img src=\"../img/sad.jpg\" alt=\"Sad cat\">\n";

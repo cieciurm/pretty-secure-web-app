@@ -1,7 +1,9 @@
 <?php 
 session_start();
-if (isset($_SESSION["id"]) == true)
+if (isset($_SESSION["id"]) == true) {
 	header("Location: newsfeed.php");
+	exit;
+}
 	
 include("templates/header"); ?>			
 		<img src="img/curious.jpg" alt="Login">
