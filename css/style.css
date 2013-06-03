@@ -88,6 +88,18 @@ textarea {
 	background: rgba(255,255,255,0.5);
 }
 
+#menu {
+	list-style-type: none;
+	margin: auto;
+	width: 70%;
+	margin-bottom: 4em;
+}
+
+#menu li {
+	float: left;
+	margin-left: 1em;
+}
+
 .post {
 	margin: auto;
 	width: 80%;
