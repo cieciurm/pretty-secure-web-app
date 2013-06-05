@@ -24,8 +24,6 @@ include("config.php");
 
 $db = new PDO("sqlite:".DB_FILE);
 
-echo "<hr>";
-
 $results = $db->query('SELECT * FROM posts ORDER BY id DESC');
 
 foreach ($results as $post) {
@@ -38,7 +36,6 @@ foreach ($results as $post) {
 	echo "<b>Tytuł:</b> " . $post['title'] . "<br>";
 	echo "<p class=\"post-body\">" . $post['post'] . "</p>";
 	echo "</div>\n";
-	echo "<hr>\n";
 }
 
 ?>
