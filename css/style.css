@@ -5,6 +5,19 @@ body {
 	margin: 0;
 }
 
+a:link, a:visited {
+	color: #544363;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e7eef2;
+	background: #544363;
+	text-decoration: none;
+}
+
+
+
 h1 {
 	text-align: center;
 }
