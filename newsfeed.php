@@ -11,7 +11,12 @@ include("templates/header");
 
 <h1>Aktualności</h1>
 
-<p>Cześć, <?php echo $_SESSION["login"]; ?>!</p>
+<p>Cześć, 
+<?php 
+include("models/user.php");
+$user = new User("", ""); 
+echo $user->getLoginById($_SESSION["id"]); 
+?>!</p>
 <ul id="menu">
 	<li> <a href="add.php">Dodaj post</a>
 	<li> <a href="">Edytuj profil</a>
@@ -20,7 +25,6 @@ include("templates/header");
 
 <?php
 
-include("config.php");
 include("models/post_list.php");
 
 $posts_list = new PostList();

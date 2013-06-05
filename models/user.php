@@ -1,6 +1,6 @@
 <?php
 
-require("../config.php");
+include("config.php");
 
 class User {
 	private $login;
@@ -66,6 +66,15 @@ class User {
 		$result = $statement->fetchAll();
 
 		return $result[0]["id"];
+	}
+
+	function getLoginById($id) {
+		$db = new PDO("sqlite:".DB_FILE);
+		$statement = $db->prepare('SELECT login FROM users WHERE id=?');
+		$statement->execute(array($id));
+		$result = $statement->fetchAll();
+
+		return $result[0]["login"];
 	}
 }
 ?>
