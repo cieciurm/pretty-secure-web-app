@@ -21,20 +21,16 @@ include("templates/header");
 <?php
 
 include("config.php");
+include("models/post_list.php");
 
-$db = new PDO("sqlite:".DB_FILE);
+$posts_list = new PostList();
+$posts = $posts_list->getAllPosts();
 
-$results = $db->query('SELECT * FROM posts ORDER BY id DESC');
-
-foreach ($results as $post) {
-	$author_query = $db->prepare('SELECT login FROM users WHERE id=?');
-	$author_query->execute(array($post['user_id']));
-	$author = $author_query->fetchAll();
-
+foreach ($posts as $post) {
 	echo "<div class=\"post\">\n";
-	echo "<b>Autor:</b> " . $author[0]['login'] . "<br>";
-	echo "<b>Tytuł:</b> " . $post['title'] . "<br>";
-	echo "<p class=\"post-body\">" . $post['post'] . "</p>";
+	echo "<b>Autor:</b> " . $post["login"] . "<br>";
+	echo "<b>Tytuł:</b> " . $post["title"] . "<br>";
+	echo "<p class=\"post-body\">" . $post["post"] . "</p>";
 	echo "</div>\n";
 }
 
