@@ -9,9 +9,6 @@ $user = new User($entered_login, $entered_password);
 
 if ($user->checkIfPasswordCorrect() == true) {
 	$_SESSION["id"] = $user->getUserId();
-	$_SESSION["login"] = $user->getLogin();
-	//echo $user->getLogin();
-	//echo $user->getUserId();
 	header("Location: ../newsfeed.php");
 	exit;
 } else {
