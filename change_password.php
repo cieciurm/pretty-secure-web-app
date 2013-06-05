@@ -21,7 +21,7 @@ echo $user->getLoginById($_SESSION["id"]);
 <form id="registration_form" action="controllers/change.php" method="post">
 	<table id="register_table">
 		<tr>
-			<td class="header">stare hasło:</td>
+			<td class="header">aktualne hasło:</td>
 			<td><input name="old_password" type="password"></td>
 		</tr>
 		<tr>
