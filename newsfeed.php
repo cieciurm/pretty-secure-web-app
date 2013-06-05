@@ -19,7 +19,7 @@ echo $user->getLoginById($_SESSION["id"]);
 ?>!</p>
 <ul id="menu">
 	<li> <a href="add.php">Dodaj post</a>
-	<li> <a href="">Edytuj profil</a>
+	<li> <a href="change_password.php">Zmień hasło</a>
 	<li> <a href="controllers/logout.php">Wyloguj się</a>
 </ul>
 

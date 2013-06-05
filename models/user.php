@@ -11,6 +11,18 @@ class User {
 		$this->password = $password;
 	}
 
+	function setLogin($login) {
+		$this->login = $login;
+	}
+
+	function setPassword($password) {
+		$this->password = $password;
+	}
+
+	function getLogin() {
+		return $this->login;
+	}
+
 	function checkIfExists() {
 		$db = new PDO("sqlite:".DB_FILE);
 		$statement = $db->prepare('SELECT login FROM users WHERE login=?');
@@ -37,6 +49,20 @@ class User {
 		$statement->execute(array($this->login, $to_store));
 	}
 
+	function updateInDb() {
+		$salt = "";
+
+		for ($i = 0; $i < 3; $i++) 
+			$salt = $salt . chr(rand(97, 122));
+
+		$hash = hash("sha256", $salt . $this->password);
+		$to_store = $salt . $hash; 
+
+		$db = new PDO("sqlite:".DB_FILE);
+		$statement = $db->prepare('UPDATE users SET password=? WHERE login=?');
+		$statement->execute(array($to_store, $this->login));
+	}
+
 	function checkIfPasswordCorrect() {
 		$db = new PDO("sqlite:".DB_FILE);
 		$statement = $db->prepare('SELECT password FROM users WHERE login=?');
@@ -50,10 +76,6 @@ class User {
 			return true;
 		else
 			return false;
-	}
-
-	function getLogin() {
-		return $this->login;
 	}
 
 	function getUserId() {
