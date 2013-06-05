@@ -7,7 +7,7 @@ if (isset($_SESSION["id"]) == false)
 include("templates/header"); 
 ?>
 
-<img src="img/happy.jpg" alt="Aktualności">
+<img src="img/reading.jpg" alt="Aktualności">
 
 <h1>Aktualności</h1>
 
