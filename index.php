@@ -22,7 +22,7 @@ include("templates/header"); ?>
 				<table id="register_table">
 					<tr>
 						<td class="header">login:</td>
-						<td><input name="new_login" type="text"></td>
+						<td><input name="new_login" id="new_login" type="text"></td>
 					</tr>
 					<tr>
 						<td class="header">hasło:</td>

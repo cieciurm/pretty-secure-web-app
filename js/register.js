@@ -91,7 +91,14 @@ function check_password() {
 }
 
 function validate_registration_form() {
+	var new_login = document.getElementById("new_login").value;
 	var new_password = document.getElementById("new_password").value;
+
+	if (new_login.length == 0) {
+		var error_msg = "Login nie może być pusty!";
+		alert(error_msg);
+		return false;
+	}
 
 	if (new_password.length < 8) {
 		var error_msg = "Twoje hasło musi mieć przynajmniej 8 znaków!";
