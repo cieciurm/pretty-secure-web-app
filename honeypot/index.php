@@ -1,4 +1,5 @@
 <?php
+session_name("PRETTYSECURE");
 session_start();
 $file = fopen("../honeypot/aaa.txt", "a");
 
