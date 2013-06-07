@@ -1,4 +1,9 @@
 <?php
+if (isset($_POST["new_login"]) == false || isset($_POST["new_password"]) == false) {
+	header("Location: ../index.php");
+	exit;
+}
+
 session_start();
 if (isset($_SESSION["id"]) == true) {
 	header("Location: ../index.php");

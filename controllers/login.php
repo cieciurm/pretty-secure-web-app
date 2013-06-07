@@ -1,4 +1,8 @@
 <?php
+if (isset($_POST["login"]) == false || isset($_POST["password"]) == false) {
+	header("Location: ../index.php");
+	exit;
+}
 
 include("../models/user.php");
 
