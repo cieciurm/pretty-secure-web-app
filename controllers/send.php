@@ -3,7 +3,7 @@ if (isset($_POST["title"]) == false || isset($_POST["content"]) == false) {
 	header("Location: ../index.php");
 	exit;
 }
-
+session_name("PRETTYSECURE");
 session_start();
 
 if (isset($_SESSION["id"]) == false) {

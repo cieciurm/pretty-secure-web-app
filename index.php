@@ -1,4 +1,5 @@
 <?php 
+session_name("PRETTYSECURE");
 session_start();
 if (isset($_SESSION["id"]) == true) {
 	header("Location: newsfeed.php");

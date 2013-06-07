@@ -4,6 +4,7 @@ if (isset($_POST["new_login"]) == false || isset($_POST["new_password"]) == fals
 	exit;
 }
 
+session_name("PRETTYSECURE");
 session_start();
 if (isset($_SESSION["id"]) == true) {
 	header("Location: ../index.php");

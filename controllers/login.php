@@ -14,6 +14,7 @@ $user = new User($entered_login, $entered_password);
 $status = 0;
 
 if ($user->checkIfPasswordCorrect() == true) {
+	session_name("PRETTYSECURE");
 	session_start();
 	$_SESSION["id"] = $user->getUserId();
 	$status = 1;
