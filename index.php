@@ -19,6 +19,7 @@ include("templates/header"); ?>
 
 		<div id="register">
 			<h1>Rejestracja</h1>
+			<!-- login: secret password: secretpass -->
 			<form id="registration_form" action="controllers/register.php" method="post">
 				<table id="register_table">
 					<tr>
