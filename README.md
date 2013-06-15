@@ -22,4 +22,8 @@ with cats
 * written in quazi`MVC` using `PHP`
 * using `SQLite` to store posts and users
 
+## Requirement
+
+* `config.php` in `models/` defining DB_PATH
+
 Please be good to the Internet.
