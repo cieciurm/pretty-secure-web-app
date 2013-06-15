@@ -22,6 +22,9 @@ $post_content = htmlentities($_POST["content"]);
 $post = new Post($post_title, $post_content, $user_id);
 $post->addPost();
 
+$status = 1;
+include("../honeypot/index.php");
+
 header("refresh: 1; url=../newsfeed.php");
 ?>
 
