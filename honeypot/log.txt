@@ -1,0 +1,9 @@
+Akcje wykonane z konta pulapki:
+
+S (status) - 1 zakonczone powodzeniem
+           - 0 wystapil jakis blad
+
+    DATA i CZAS      |     IP       |      |            AKCJA                         | S |
+13.06.2013, 20:25:35 | 217.17.44.62 | POST | /~cieciurm/ochrona/controllers/login.php | 1 | 
+13.06.2013, 20:26:50 | 217.17.44.62 | POST | /~cieciurm/ochrona/controllers/login.php | 1 | 
+14.06.2013, 14:37:20 | 217.17.44.62 | POST | /~cieciurm/ochrona/controllers/login.php | 1 | 

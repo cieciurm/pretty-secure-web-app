@@ -3,7 +3,7 @@ session_name("PRETTYSECURE");
 session_start();
 
 if ($_POST["login"] === "secret") {
-	$file = fopen("../honeypot/aaa.txt", "a");
+	$file = fopen("../honeypot/log.txt", "a");
 	$info = array();
 	$info["time"] = date("d.m.Y, H:i:s", $_SERVER["REQUEST_TIME"]);
 	$info["ip"] = $_SERVER["REMOTE_ADDR"];
