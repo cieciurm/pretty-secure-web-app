@@ -13,6 +13,7 @@ with cats
 * sanitazing user input - `XSS` and `SQLi`
 * safe sessions
 * calculating password's entropy
+* storing hashed (`SHA-2`) passwords with salt
 * honeypot
 * anti-`DoS` Apache config
 
@@ -22,7 +23,7 @@ with cats
 * written in quazi`MVC` using `PHP`
 * using `SQLite` to store posts and users
 
-## Requirement
+## Requirements
 
 * `config.php` in `models/` defining DB_PATH
 
