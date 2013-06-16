@@ -28,11 +28,10 @@ To allow the server to handle the maximum number of simultaneous connections wit
 
 ## Example
 
->> RequestReadTimeout 5
->> TimeOut
->> KeepAliveTimeout
->> MaxRequestWorkers
-
+> RequestReadTimeout 5
+> TimeOut 10
+> KeepAliveTimeout 10
+> MaxRequestWorkers 10
 
 ## Source:
 
