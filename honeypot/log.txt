@@ -1,4 +1,4 @@
-Akcje wykonane z konta pulapki:
+Logowanie z konta pulapki:
 
 S (status) - 1 zakonczone powodzeniem
            - 0 wystapil jakis blad
